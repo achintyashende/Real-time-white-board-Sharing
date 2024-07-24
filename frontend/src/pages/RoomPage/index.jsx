@@ -17,7 +17,7 @@ const RoomPage = () => {
                 <span className="text-primary"> [Users Online : 0]</span>
             </h1>
             <div className="col-md-10 gap-3 px-5 mx-auto mb-4 d-flex align-items-center justify-content-around">
-                <div className="col-md-2 mx-auto d-flex justify-content-between gap-1">
+                <div className="col-md-4 mx-auto d-flex justify-content-between gap-1">
                     <div className=" d-flex gap-1">
                         <label htmlFor="pencil">Pencil</label>
                         <input 
@@ -45,6 +45,16 @@ const RoomPage = () => {
                         name="tool" 
                         checked={tool === "rect"}
                         value="rect" 
+                        onChange={(e) => setTool(e.target.value)} 
+                        />
+                    </div>
+                    <div className=" d-flex gap-1">
+                        <label htmlFor="pencil">Circle</label>
+                        <input 
+                        type="radio" 
+                        name="tool" 
+                        checked={tool === "circle"}
+                        value="circle" 
                         onChange={(e) => setTool(e.target.value)} 
                         />
                     </div>
@@ -79,6 +89,8 @@ const RoomPage = () => {
                 ctxRef={ctxRef}
                 elements = {elements}
                 setElements = {setElements}
+                tool = {tool}
+
                 />
             </div>
         </div>
