@@ -1,11 +1,15 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import "./index.css"
 import Whiteboard from "../../components/Whiteboard";
 
 const RoomPage = () => {
 
+    const canvasRef = useRef(null);
+    const ctxRef = useRef(null);
+
     const [tool, setTool] = useState("pencil");
     const [color, setColor] = useState("black")
+    const [elements, setElements] = useState([])
 
     return (
         <div className="row">
@@ -15,7 +19,7 @@ const RoomPage = () => {
             <div className="col-md-10 gap-3 px-5 mx-auto mb-4 d-flex align-items-center justify-content-around">
                 <div className="col-md-2 mx-auto d-flex justify-content-between gap-1">
                     <div className=" d-flex gap-1">
-                        <label for="pencil">Pencil</label>
+                        <label htmlFor="pencil">Pencil</label>
                         <input 
                         type="radio" 
                         name="tool" 
@@ -25,7 +29,7 @@ const RoomPage = () => {
                         />
                     </div>
                     <div className=" d-flex gap-1">
-                        <label for="pencil">Line</label>
+                        <label htmlFor="pencil">Line</label>
                         <input 
                         type="radio" 
                         name="tool" 
@@ -35,7 +39,7 @@ const RoomPage = () => {
                         />
                     </div>
                     <div className=" d-flex gap-1">
-                        <label for="pencil">Rectangle</label>
+                        <label htmlFor="pencil">Rectangle</label>
                         <input 
                         type="radio" 
                         name="tool" 
@@ -70,7 +74,12 @@ const RoomPage = () => {
 
             {/* Whiteboard */}
             <div className="col-md-10 mt-4 mx-auto canvas-box">
-                <Whiteboard/>
+                <Whiteboard 
+                canvasRef={canvasRef} 
+                ctxRef={ctxRef}
+                elements = {elements}
+                setElements = {setElements}
+                />
             </div>
         </div>
     )
