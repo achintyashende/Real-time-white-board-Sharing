@@ -1,7 +1,7 @@
 {
   "name": "mern-realtime-whiteboard-app-backend",
   "version": "1.0.0",
-  "description": "this is the backend for mern realtime white board sharing app",
+  "description": "this is the backend for MERN realtime white board sharing app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
