@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "Raman Sharma",
+  "author": "Achintya Shende",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
