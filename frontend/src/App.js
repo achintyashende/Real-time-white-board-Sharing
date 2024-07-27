@@ -8,7 +8,8 @@ import Sidebar from "./Sidebar";
 
 import "./style.css";
 
-const server = "http://localhost:5000";
+// const server = "http://localhost:5000"; //BEFORE DEPLOYMENT ON RENDER
+const server = "https://realtime-whiteboard-sharing.onrender.com";
 const connectionOptions = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",
