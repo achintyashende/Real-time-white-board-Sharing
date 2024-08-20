@@ -32,7 +32,6 @@ const ClientRoom = ({ userNo, socket, setUsers, setUserNo }) => {
           mt-3"
           style={{ height: "500px" }}
         >
-          // <img className="w-100 h-100" ref={imgRef} src="" alt="image" />
           <img style={{width: 846, height: 780}} ref={imgRef} src="" alt="image" />
         </div>
       </div>
